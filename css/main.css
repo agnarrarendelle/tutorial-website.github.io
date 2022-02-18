@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+/* General section: Reset CSS properties */
+
+/* CSS resets to reset some unwanted properties applied by browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+hr {
+  width: 30%;
+  margin: 20px auto;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Set the cursor to pointer when hovering on every link and button  */
+a, button {
+  cursor: pointer;
+}
+
+/* Utilities below*/
+/* A simple class to add color to elements when they are being hovered */
+.navigation-link-hover:hover {
+  color: #2f13e4;
+}
+/* Added to different sections to increase the spaces between them for
+better readability
+ */
+.space {
+  height: 10px;
+}
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  color: #4B66CC
+}
+
+/* Utilities ends*/
+
+
+
+/* General section ends */
+/* NavBar CSS below */
+/* Reference:https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci */
+/* changes and enhancements:
+    1: Navbar from the above link slides to the center of the screen when clicked on mobile, but I have a enhancement to it
+    so that it slides from the top to the center of the screen when clicked
+    2. The original navbar has simply some texts on the leftmost, but in my version
+    I have successfully replace them with a image logo
+    3. The original navbar takes up entirely screen height on mobile, completely overlays everything else.
+    In my version, I made it only take up 70%-80% of the mobile screen. 
+*/
+
+/* The navigation bar wrapper, display:flex to display links horizontally */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #E2E8F0;
+  background-color: #659dbd;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Set it to display:none because it only appears on mobile */
+.navbarButton {
+  display: none;
+}
+
+/* The bars is located on the rightmost of the nav bar */
+.navbarButton .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  /*animation effect triggered when clicked to show the transformation between
+    normal state and active state, and set transition to all to apply the effect to all three bars */
+  transition: all 0.3s ease-in-out;
+  background-color: #f7f7f7;
+}
+
+/* Reserves some spaces between links in the nav */
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* Logo that resides in the leftmost in the nav */
+.nav-logo img {
+  width: 200px;
+  height: 60px;
+}
+
+/* Media Query for navigation bar, and what it does is that when screen becomes small enough, it hides
+all the link and show the button instead, and when the button is being clicked the links would be dragged down
+to the center of the screen, allowing users to choose their destination. */
+@media screen and (max-width:900px) {
+  .navbar {
+    height: 35px;
+    max-height: 40px;
+    /* Give navbar a max-height to prevent it take up too many spaces on mobile screen */
+  }
+  /* The nav menu is located on the top the page, outside of the user's viewport. It would be moved to the
+  center of the screen when users click on the navbar button */
+  .nav-menu {
+    position: absolute;
+    left: 0;
+    top: -500%;
+    /* This makes it outside of the screen */
+    flex-direction: column;
+    /* Displays the links vertically instead of horizontally on mobile */
+    justify-content: start;
+    background-color: #689dbd;
+    width: 100%;
+    text-align: center;
+    transition: 0.6s;
+    border-radius: 0 0 100px 100px;
+    z-index: 1;
+    /* Set z-index to 1 to ensure that it would not be overlapped by any other elements */
+  }
+  .nav-menu.active {
+    top: 0;
+    height: 80vmax;
+    /* Set top from -500% to 0 to move the nav menu to user's viewport when active */
+  }
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+  /* Resize the logo in nav to fit in the mobile screen */
+  .nav-logo img {
+    width: 100px;
+    height: 30px;
+  }
+  .navbarButton {
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+    /* z-index is set to two to ensure that the nav button is above everything else except for 
+    the nav menu */
+  }
+  /* Set the second bar to opacity:0 because the transformed shape from three horizontally bar
+ resembles a cross, and the second bar is unnecessary */
+  .navbarButton.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+    /* Make the first and third bars rotate 45 degree toward opposite direction separately,
+  and the final result is a cross shape when active
+  */
+  .navbarButton.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbarButton.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* NavBar CSS ends */
+
+
+
+/* Footer CSS below */
+#footer-wrapper {
+  background: #689dbd;
+  width: 100%;
+  text-align: left;
+  font: 25px sans-serif;
+  padding: 55px 50px;
+}
+
+/* Footer is divided into three sections, left, center and right, but they do not take up equal space */
+#footer-left, #footer-center, #footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+#footer-left {
+  width: 40%;
+}
+
+#footer-left img {
+  width: 200px;
+  height: 80px;
+}
+
+/* Footer links */
+.footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-links a {
+  display: inline-block;
+  /* Make the links display at the same line */
+  line-height: 1.8;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+}
+
+/* Footer Center */
+#footer-center {
+  width: 35%;
+  color: #ffffff;
+}
+
+.footer-center-info {
+  margin-bottom: 30px;
+}
+
+/* These logos are for information section in center, and I gave all of them grey background and white color with a
+   smooth border  */
+#footer-center i {
+  background-color: #33383b;
+  font-size: 30px;
+  border-radius: 60%;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  line-height: 40px;
+  /* Make the logo located at the center of their background */
+}
+
+#footer-center p {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#footer-center a {
+  color: white;
+}
+
+/* Class added to separate texts to different line */
+#footer-center span {
+  display: block;
+  /* This makes the rest of the texts fo to another line  */
+  line-height: 3;
+}
+
+#footer-center a:hover {
+  color: blue;
+}
+
+/* Footer Right */
+#footer-right {
+  width: 20%;
+}
+
+.footer-company-about {
+  color: #a86323;
+  font-size: 20px;
+}
+
+/* The title for footer about section */
+.footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-icons {
+  margin-top: 35px;
+}
+
+/* The icons on about section in footer */
+.footer-icons .fa {
+  display: inline-block;
+  /*This makes them reside in the same line*/
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 10px;
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* The button that takes users to the top when clicked */
+#back-to-top-button {
+  position: fixed;
+  /* Fixed position make it always stay at the bottom right */
+  right: 0;
+  bottom: 0;
+  font-size: 30px;
+  cursor: pointer;
+  color: #084f79;
+  z-index: 99;
+}
+
+/* Media Query for footer and back-to-top button */
+@media screen and (max-width: 900px) {
+  /* Decrease font size to fit in mobile screen */
+  #footer-wrapper {
+    font: bold 14px;
+  }
+  #footer-left, #footer-center, #footer-right {
+    display: block;
+    /* When on mobile, the three sections of footer would take up entire screen width
+        one above another, so set it to display:block and width:100% */
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  #footer-center i {
+    display: block;
+    margin: 10px auto;
+  }
+  /* Cut down the size of back-to-top button on mobile */
+  #back-to-top-button {
+    transform: scale(0.5);
+  }
+}
+
+/* Footer Section ends */

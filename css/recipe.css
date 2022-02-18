@@ -1,0 +1,250 @@
+/*.page-content section below */
+/* Reference:https://codepen.io/mikestreety/details/yVNNNm */
+/* Changes and enhancements:
+	1: The tabs of the original version don't have any hover effect, but in my version
+	I add a couple of hover effects such as enlarging texts and increase width on hover
+	2: The content sections of the original version have nothing more than texts.
+	In my version, I also added an image carousel to each tab contents 
+	3: In my adaption, I hide some texts and create a read more button that shows up
+	on mobile so that users can choose whether to read more texts on mobile themselves
+	*/
+
+/* This is a container that contains all the recipes of
+several different dishes, and users can switch recipe
+using the recipe-page above.
+ */
+#recipe-container {
+	box-sizing: border-box;
+	padding-top: 10vh;
+	font-weight: 300;
+	line-height: 1.5;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.recipe-images {
+	text-align: center;
+}
+
+/* recipe-page is the container that contains four different recipe
+ pages*/
+.recipe-page {
+	display: flex;
+	flex-wrap: wrap;
+	/*flex-wrap: wrap to make sure that 
+	 all pages resides on the same line */
+	font-size: 1.5rem;
+}
+
+/*.recipe-tabs is the tabs on which users can click and
+navigate to another recipe page */
+.recipe-tabs {
+	order: 1;
+	display: block;
+	padding: 0.5rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+	background: #90caf9;
+	font-weight: bold;
+	/* Change background color and enlarge text on hover */
+	transition: background-color ease 0.2s, font-size ease 0.3s;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+/* page-content is where the title, texts and image carousel
+of a recipe resides  */
+.page-content {
+	order: 99;
+	flex-grow: 1;
+	width: 100%;
+	display: none;
+	/* all pages all set to hidden until they get chosen by tabs */
+	padding: 1rem;
+	background-color: #fff;
+}
+
+.page-content h1, .page-content p {
+	margin: 0 70px;
+}
+
+/* Increase tab font size when on hover */
+.recipe-tabs:hover {
+	font-size: 150%;
+}
+
+/* set page input to none because we do not use them as
+real input but as tabs to switch pages, therefore we don't
+need the input area*/
+.recipe-page input {
+	display: none;
+}
+
+/* change tabs color when its corresponding input has been selected */
+.recipe-page input:checked+.recipe-tabs {
+	background: #11B0D2;
+}
+
+/* Only display a recipe when the input has been selected */
+
+.recipe-page input:checked+.recipe-tabs+.page-content {
+	display: block;
+}
+
+/* Media Query for recipe pages and tabs */
+@media screen and (max-width: 900px) {
+	#recipe-container {
+		width: 100%;
+	}
+	.page-content, .recipe-tabs {
+		order: initial;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+	.recipe-page .recipe-tabs {
+		width: 100%;
+		margin-right: 0;
+		margin-top: 0.2rem;
+	}
+	.page-content h1, .page-content p {
+		margin: 0 20px;
+	}
+}
+
+/*.page-content section ends */
+
+
+
+/*Image carousel section below */
+/* Reference:https://stackoverflow.com/questions/60717232/javascript-how-to-add-multiple-image-slider-on-one-page-with-same-script */
+/* Changes and enhancements:
+	1:The original version only has 2 images in a carousel, but there are 4 in my version
+	2:The original version are displayed normally in a page. In my version, there are multiple
+	carousels in a page, and only one of them is displayed at any given time. To switch to another
+	carousel, users need to click different tabs
+*/
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+	text-align: center;
+}
+
+.mySlides img {
+	height: 80%;
+	width: 100%;
+	max-height: 700px;
+	max-width: 1200px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: rgb(14, 240, 127);
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev {
+	left: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(56, 51, 51, 0.8);
+}
+
+/* Three dots below each image that allows users
+  to switch to a specific image  */
+.slider-dots {
+	text-align: center;
+}
+
+.slider-dot {
+	cursor: pointer;
+	margin: 0 2px;
+	height: 15px;
+	width: 15px;
+	background-color: #bbb;
+	display: inline-block;
+	border-radius: 50%;
+	/* When selected, change background color */
+	transition: background-color 0.6s ease;
+}
+
+.slider-active, .slider-dot:hover {
+	background-color: #717171;
+}
+
+/* Media Query for image dots */
+@media screen and (max-width: 900px) {
+	.next, .prev {
+		font-size: 10px;
+		padding: 5px;
+		margin-top: -50px;
+	}
+	/* give image max width an height in case
+	it run out of container on mobile */
+	.mySlides img {
+		max-width: 900px;
+		max-height: 400px;
+	}
+}
+
+/*Image carousel section ends */
+
+
+
+/*read more button section below */
+/* read more/less toggle on mobile */
+
+.read_more {
+	display: none;
+	background: #339DFF;
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px;
+	border: none;
+	border-radius: 50px;
+	width: 140px;
+	text-align: center;
+	margin: 20px 0;
+}
+
+/* Media Query for read more button */
+@media screen and (max-width: 900px) {
+	/* Set rest of the texts to hidden on mobile by default,
+	and they can be toggled by clicking on the button */
+	.extra_content {
+		display: none;
+	}
+	.show {
+		display: inline;
+	}
+	.read_more {
+		display: block;
+	}
+}
+
+/*read more button section ends */

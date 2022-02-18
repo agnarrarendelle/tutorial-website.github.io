@@ -1,0 +1,248 @@
+/* Article section below */
+/* Reference:https://codepen.io/anesofy/pen/NWrKWrQ */
+/* Changes and enhancements:
+    1: The layout of my adaption is roughly the same to the original version, except for
+    that the article images are all located above the article texts instead of next to them
+    like the original version
+    2: I add a second article page that can be reached by using the page-switching button
+    below the article section, and the viewport is slid to the top when switching to another 
+    page
+*/
+
+/* Wrapper that contain both article section and sidebar */
+.article-wrapper {
+  width: 90%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+/* another wrapper to display articles horizontally so that article section
+and sidebar are displayed next to each other*/
+.article-wrapper-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main {
+  width: 70%;
+}
+
+aside {
+  width: 25%;
+}
+
+/* all links in article section are displayed in-line*/
+.article-wrapper a {
+  display: inline-block;
+}
+
+.article-wrapper img {
+  max-width: 100%;
+}
+
+/* article titles are given larger font size */
+
+.article-title {
+  margin-bottom: 0.5em;
+  font-size: 4rem;
+  /*Make title extra big*/
+}
+
+.article-body {
+  font-size: 2rem;
+}
+
+/* article information and read-more */
+.article-info, .article-read-more {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+/* dates and comments are located underneath the article images */
+.date, .comments {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.article-read-more {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #78C0F2;
+  font-weight: 600;
+}
+
+.article-read-more:hover {
+  color: #379FE9;
+  text-decoration: underline;
+}
+
+/* featured article has a bottom line to separate it from other articles */
+.article-featured {
+  border-bottom: 3px solid rgb(8, 30, 228);
+  margin-bottom: 4em;
+}
+
+.article-featured img {
+  height: auto;
+  width: 800px;
+}
+
+.article-featured .article-title {
+  color: rgb(11, 150, 243);
+  font-size: 6rem;
+}
+
+/* The other articles below the featured article */
+.article-recent {
+  display: flex;
+  flex-direction: column;
+  /* Display them vertically */
+  margin-bottom: 2em;
+}
+
+.article-recent img {
+  min-height: 300px;
+  height: auto;
+  width: 600px;
+}
+
+.article-recent-main {
+  order: 2;
+}
+
+.article-recent-secondary {
+  order: 1;
+}
+
+/* Media Query for article section */
+@media screen and (max-width: 900px) {
+  /* display article section and sidebar vertically on mobile*/
+  .article-wrapper-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  main {
+    width: 100%;
+  }
+  aside {
+    width: 85%;
+  }
+  
+  .article-img {
+    order: -2;
+  }
+  .article-info {
+    order: -1;
+  }
+  .article-featured .article-title {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .article-title {
+    font-size: 3rem;
+  }
+  /* displayed recent articles vertically on mobile */
+  .article-recent {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  /* stretch recent articles to fit mobile screen*/
+  .article-recent-main {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .article-recent-secondary {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .article-image {
+    object-fit: cover;
+    width: 100%;
+    min-height: 250px;
+  }
+  .article-featured img {
+    height: 27rem;
+  }
+}
+
+/* Article section ends */
+
+
+
+/* Sidebar section below */
+/* sidebar is located next to article section */
+.sidebar {
+  display: flex;
+  /*post section and title are displayed vertically*/
+  flex-direction: column;
+  border: 20px solid #C3EAF4;
+  padding: 1em;
+  margin-bottom: 2em;
+  max-width: 480px;
+  /*give it a max-width to prevent it go beyond mobile screen*/
+}
+
+.sidebar-title {
+  color: rgb(11, 150, 243);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* post section under sidebar title */
+.sidebar-post {
+  display: flex;
+  /*all posts are displayed vertically in sidebar*/
+  flex-direction: column;
+  border-bottom: 1px solid grey;
+}
+
+.sidebar-img {
+  order: -1;
+  height: 200px;
+  width: 400px;
+}
+
+.sidebar-post-title {
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-bottom: 1em;
+}
+
+.sidebar-post-title:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar section ends */
+
+
+
+/* page button section below */
+/* page buttons are always located in the center */
+#page-button-wrapper {
+  text-align: center;
+}
+
+/* page button are used to switch to different pages */
+.page-button {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  padding-top: 2px;
+  background-color: #58E0AA;
+  color: #f8f7f8;
+  font-size: 4em;
+  font-weight: bold;
+  border-radius: 50%;
+  border: none;
+}
+
+.page-button:hover {
+  background-color: #389872;
+}
+
+/* page button section ends */

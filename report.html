@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ol {
+            list-style-type: none;
+        }
+        ol li:before {
+            content: "[" counter(section, decimal) "] ";
+        }
+        ol li { 
+            counter-increment: section;
+        }
+    </style>
+</head>
+<body>
+    <h1>Name: Huang Yi Wei</h1>
+    <h1>Candidate Number: LX2080</h1>
+<hr>
+<!-- Introduction -->
+<section>
+    <H1>Introduction</H1>
+    <h3>Story of the Website</h3>
+    <p>I have built a website on Taiwanese Food, including articles and different information
+        on them.
+    </p>
+    <h3>Structure of the Website</h3>
+    <p>For this Website, I have chosen to build it in a way such that "Images Dominates Text"
+        . Visual contents take up most portion of my websites as they are more likely to catch
+        other's attention and stand out than pure texts. In addition to that, the website has
+        5 pages in total, and there are links to each one of them at the top and bottom of each
+        page.
+    </p>
+</section>
+<hr>
+<section>
+
+    <h1>State 3 things that have inspired you when creating your website</h1>
+    <ol>
+        <li>My Geometric Location</li>
+        <li>My Own Personal Experience</li>
+        <li>The Acceptability of Topic</li>
+    </ol>
+    <p>As a Taiwanese boy, I was gifted with the opportunity to explore a great variety of food when I was born
+        as Taiwan encompasses many different cuisines from  large fish such as tuna to beef. As a result, I would
+        like to take this change and expose what my country has in store to more people. On top of that, I was born and raised
+        by chiefs. My parents have been working as professional chiefs years before I was born, and without a doubt
+        that have a drastic impact on me since I was given much more changes to understand our cuisines than average
+        people living here. Therefore, building a website on Taiwanese food is extremely suitable for me as I have a 
+        deep understanding of this topic already. Moreover, another important inspiration to me is the fact that topics
+        on food are generally likely to give rise to interest from others as food is part of our daily life that cannot
+        be separated, and a website on food is not limited to a specific group of audience. For this reason, I believe
+        that my chosen topic is the most appropriate one for the topic of a website
+    </p>
+</section>
+<hr>
+<section>
+
+    <h1>State 3 ways in which your site is accessible.</h1>
+    <ol>
+        <li>I have chosen appropriate HTML tags for different sections of my website instead of simply applying div tags to
+            everything. 
+        </li>
+        <li>My website follows the convention that every section always starts with a heading tag, followed by
+            more texts and images for details. This ensures that different parts of the website share similar layouts
+            and are subject to great accessibility and maintainability.
+        </li>
+        <li>
+            To minimize the chances of images not displaying property, I have chosen to store all of them in a local folder
+            instead of having them uploaded to the Internet. Furthermore, I have also added descriptive alternative texts for
+            each images in case of some unexpected accidents 
+        </li>
+    </ol>
+</section>
+<section>
+
+    <h1>State 3 ways in which you have considered usability in your site.</h1>
+    <ol>
+        <li>I have created visible indication of focus on my website. For instance a great number of CSS 
+            hover effect has been applied to most important part of the website to provide a clue of what they are 
+            looking at to the user
+        </li>
+        <li>Sufficient white spaces can be seen across my website as they makes texts easier to read and server well
+            to separate each section of the website
+        </li>
+        <li>
+            On the recipe page, I have created a responsive design that automatically hides some part of the text 
+            on mobile device because mobile screens are limited by their size and too many texts at the same time
+            can easily decrease the usability of the website
+        </li>
+    </ol>
+</section>
+
+<section>
+
+    <h1>State 3 things you had to learn/find out by yourself when creating your site, and describe how you did that</h1>
+    <ol>
+        <li>
+            During the process of building my website, I realized that there are always gaps between my knowledge and that
+            being able to figure out the problems I have never encountered before with the help of the Internet is a crucial skill.
+            For example, when I was building a image carousel using my own approach I found out that having multiple carousels
+            in the same page were going to cause some issues to the display of the images. Fortunately, I found a post on StackOverFlow
+            that described same problems, and with a few attempts I was able to adapt that solution to my websites and created
+            multiple fully functional carousels in the same page.
+        </li>
+        <li>Having to make a website myself, I finally understand the importance of responsive design. Without having applied
+            responsive layouts to my website, a small text section could have taken up an entire mobile screen and had a fairly
+            negative effect on the displays of other elements. Having made my website responsive, I have ensured the accessibility
+            on different platforms including PC and mobile devices.
+        </li>
+        <li>
+            Constantly making changes to my website, I have truly started to appreciate Version Control System. Due to the fact that
+            a small change to CSS could result in a drastic change to my website layout, I used GIT to save different of
+            my source code in case unexpected behaviors caused by changes to CSS, and that succeeded in preventing me from 
+            ruining a huge section of my website as I could easily revert the changes made to previous stable states with the help
+            of GIT
+        </li>
+    </ol>
+</section>
+<hr>
+<section>
+    <h1>What aspects of your work do you think worked well and why?</h1>
+    <p>Without a doubt, I am most proud of the recipe page of my website. For that page, I made a tab section that
+        displays different recipes depending on the tab that is currently active. Inside each tab section is an image carousel
+        that displays different images responsive to user's action. I truly learned how to properly build abstractions 
+        in JavaScript so that I could focus on coding each functionality based on previous-built abstractions without 
+        needing to concern myself with other parts that are not in the current abstraction layer. Had I chosen to build
+        the tab section and image carousels at the same time, I would have faced a great deal of issues for not using abstractions to make
+        those tasks bearable.
+    </p>
+</section>
+<hr>
+<section>
+    <h1>What aspects of your work could be improved, and how might you do things differently another time?</h1>
+    <p>I wish I could have added more pages to the article page. In that page, I created a next/previous HTML page navigation
+        with JavaScript, but due to some unknown issues I was not able to add more than two pages without causing the pages 
+        to malfunction, and I suppose that it has something to do with a function that I wrote because it could only
+        hide one page when I clicked on the page-switching button, and all the previous pages would still display normally.
+        In order to fix it, I would give each page an unique ID and store them in array next time. Without feeling the necessity,
+        I did not use any data structure to store each page and just give them an ID, but it turned out that having them
+        stored in some form of data structure would make them more maintainable and cause less issues. Next time, I would
+        use a for loop to loop over the array that stores the IDs of the each page and set the current one to active and
+        the other to hidden.    
+    </p>
+</section>
+<hr>
+<section>
+
+    <h1>What resources were used when creating your work?</h1>
+    <h3>Images</h3>
+            <ol>
+                <li>Rai, 一杯珍奶 搖出台灣新經濟奇蹟, 2018.[Online]. 
+                    Available: https://imgs.gvm.com.tw/upload/gallery/20181029/54590_00.jpg.
+                    Accessed: [05-Sep-2021].
+                </li>
+    
+                <li>Angela's cooking, 紅燒牛肉麵, 2020.[Online]. 
+                    Available: https://tokyo-kitchen.icook.network/uploads/recipe/cover/338564/8869cd181686929d.jpg.
+                    Accessed: [05-Sep-2021].
+                </li>
+    
+                <li>傅家媳婦的美食學習, 阿雲師南部粽完整攻略, 2016.[Online]. 
+                    Available: https://tokyo-kitchen.icook.network/uploads/recipe/cover/158190/0bddadd1c2d587da.jpg.
+                    Accessed: [05-Sep-2021].
+                </li>
+    
+                <li>楊桃文化事業有限公司, 蚵仔煎, 2011.[Online]. 
+                    Available: https://d3l76hx23vw40a.cloudfront.net/recipe/gy67-008.jpg.
+                    Accessed: [05-Sep-2021].
+                </li>
+                
+                <li>
+                    長毛家常小料理, 酥炸臭豆腐-台式泡菜, 2020.[Online]. 
+                    Available: https://imageproxy.icook.network/resize?background=255%2C255%2C255&height=1200&nocrop=false&stripmeta=true&type=auto&url=http%3A%2F%2Ftokyo-kitchen.icook.tw.s3.amazonaws.com%2Fuploads%2Frecipe%2Fcover%2F343060%2Fc3ca7ea81315f49c.jpg&width=1200.
+                    Accessed: [07-Sep-2021].
+                </li>
+                <li>
+                    詩雅, 鳳梨酥-飛利浦氣炸鍋, 2021.[Online]. 
+                    Available: https://tokyo-kitchen.icook.network/uploads/recipe/cover/366600/dd54a4b97838b894.jpg.
+                    Accessed: [07-Sep-2021].
+                </li>
+    
+                <li>
+                    hindun, Cartoon Portrait headshot avatar, 2017.[Online]. 
+                    Available: https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/12226669/original/f07aca61b97e169980d9a966a62cef2533fca217/draw-your-portrait-become-cartoon-look.png.
+                    Accessed: [07-Sep-2021].
+                </li>
+                <li>
+                    hindun, cartoon portrait headshot avatar, 2021.[Online]. 
+                    Available: https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/5924cf5f13d52e59a270acd26060549b-1618528764/f210413%201%20x/draw-you-one-realistic-style-cartoon-portrait.jpg.
+                    Accessed: [07-Sep-2021].
+                </li>
+                <li>
+                    brendan, krista cartoon, 2015.[Online]. 
+                    Available: https://mrpardons.com/wp-content/uploads/2015/11/krista-cartoon.jpg.
+                    Accessed: [07-Sep-2021].
+                </li>
+    
+                <li>
+                    台南旅遊網, 神農街, 2021.[Online]. 
+                    Available: https://www.twtainan.net/image/17511/1024x768.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>
+                    ETtoday, 老屋迷人魅力爆發！,2017.[Online]. 
+                    Available:https://cdn2.ettoday.net/images/1574/1574185.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>
+                    奧丁丁客棧, 南部9條特色老街看這篇,2019 .[Online]. 
+                    Available:https://travelimg.yam.com/DATA/ARTICLE/20190904174418217.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+    
+                <li>
+                    愛伯特吃喝玩樂全記錄, 桃園小吃推薦,2019 .[Online]. 
+                    Available:https://www.alberthsieh.com/wp-content/uploads/ty19_snack.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+    
+                <li>
+                    Martin Walls,Free Exasperation Stock Photo ,2019 .[Online]. 
+                    Available:https://images.freeimages.com/images/large-previews/0a7/exasperation-1435612.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>
+                    Martin Walls,Free Kenny In London 31 Stock Photo ,2020 .[Online]. 
+                    Available:https://images.freeimages.com/images/large-previews/752/kenny-in-london-31-1439290.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>
+                    zulema011 ,Free Profile Stock Photo ,2019 .[Online]. 
+                    Available:https://images.freeimages.com/images/large-previews/51f/profile-1439243.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>
+                    shiuhk ,意警沒收 800 隻皮蛋形容不適合食用 ,2019 .[Online]. 
+                    Available:https://resource01-proxy.ulifestyle.com.hk/res/v3/image/content/2325000/2326405/egg2_1024.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>
+                    TripTaiwan編輯部,基隆小旅行 2日1夜夏日海邊行程 ,2018 .[Online]. 
+                    Available:https://www.triptaiwan.com/wp-content/uploads/2019/07/%E5%9F%BA%E9%9A%86%E6%87%B6%E4%BA%BA%E5%8C%85-%E6%AD%A3%E6%BF%B1%E6%BC%81%E6%B8%AF%E5%BD%A9%E8%89%B2%E5%B1%8B-%E5%BB%9F%E5%8F%A3%E5%A4%9C%E5%B8%82-13.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>Jack Huang／日本小商人 ,珍奶進軍日本20年後突然爆紅...用行為經濟學解讀「台灣手搖飲」日本狂熱神話,2019 .[Online]. 
+                    Available:https://doqvf81n9htmm.cloudfront.net/data/crop_article/91169/shutterstock_1271869054.jpg_1140x855.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>NOWnews 今日新聞 ,珍奶20年前只要15元！男心酸揭「漲價真相」：喝的是租金,2020 .[Online]. 
+                    Available:https://obs.line-scdn.net/0hP94Zn0yXDxYJIyZC37ZwQTN1DHk6TxwVbRVeFUpNUSJzEUoVZhdDIyV3BiAtEkhIZxdIeSwgFCd2FUlBNhZD/w644.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>MENU美食誌 ,2021牛肉麵推薦,2021 .[Online]. 
+                    Available:https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2021/08/10/20210810-054949_U20525_M706279_27e5.jpg?itok=v7cIOaZ-.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li> Claire ,新竹牛肉麵推薦｜人氣爆表店家11選,2020 .[Online]. 
+                    Available:https://www.gomaji.com/blog/wp-content/uploads/2020/12/95752442_837773643412045_2394115760925569522_n.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>FAIRYLOLITA ,勾以刈包。網友譽為「在地最強刈包」,2020 .[Online]. 
+                    Available:https://fairylolita.com/wp-content/uploads/2020/06/DSCF4740-1.jpg.
+                    Accessed: [08-Sep-2021].
+                </li>
+                <li>品牌志 ,台灣小吃精緻化，刈包做的品牌行銷連英國人都驚艷,2015 .[Online]. 
+                    Available:https://www.smartm.com.tw/data/Images/38/cc/df/8d/644f712a94beeea2013d7d3.jpg?v=1601481602.
+                    Accessed: [09-Sep-2021].
+                </li>
+                <li>方格子 Vocus ,尾牙就是要吃刈包「虎咬豬」才能中大獎！,2020 .[Online]. 
+                    Available:https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2020/01/10/20200110-044857_U5965_M584567_33ad.jpg?itok=xJJAGu_B.
+                    Accessed: [09-Sep-2021].
+                </li>
+                <li>MATCHA ,日本煎餃和台灣鍋貼有何不同？,2016 .[Online]. 
+                    Available:https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2016/07/07/20160707-055409_U3927_M172991_261d.jpg?itok=MhIeYyCB.
+                    Accessed: [09-Sep-2021].
+                </li>
+                <li>食尚編輯部,台南5家超欠吃煎餃,2020 .[Online]. 
+                    Available:https://cc.tvbs.com.tw/img/program/upload/2020/04/29/20200429192902-db6683d8.jpg.
+                    Accessed: [09-Sep-2021].
+                </li>
+                <li>台東茂仁秋菊阿嬤的庭園廚房 ,用平底鍋煎出好吃煎餃，關鍵在「水量」,2019 .[Online]. 
+                    Available:https://img.ltn.com.tw/Upload/food/page/2019/03/04/190304-8693-0-NaqYg.png.
+                    Accessed: [09-Sep-2021].
+                </li>
+                <li>krista cartoon ,brendan,2015 .[Online]. 
+                    Available:https://mrpardons.com/krista-cartoon/.
+                    Accessed: [09-Sep-2021].
+                </li>
+                <li>I will draw realistic Cartoon Portrait headshot avatar from a photo ,hindun,2016 .[Online]. 
+                    Available:https://www.fiverr.com/hindun/draw-your-portrait-become-cartoon-look.
+                    Accessed: [09-Sep-2021].
+                </li>
+                <li> I will draw realistic cartoon portrait headshot avatar from a photo,hironan,2021 .[Online]. 
+                    Available:https://www.fiverr.com/hironan/draw-you-one-realistic-style-cartoon-portrait.
+                    Accessed: [09-Sep-2021].
+                </li>
+            </ol>
+        <h3>Articles</h3>
+            <ol>
+                <li>
+                    Sharadha,12 Best Bubble Tea In Taipei, Taiwan  ,2021 .[Online]. 
+                    Available:https://trip101.com/article/best-bubble-tea-in-taipei-taiwan.
+                    Accessed: [05-Sep-2021].
+                </li>
+                <li>
+                    Keoni Everington,Taipei shop's NT$10,000 beef noodle soup world's most expensive ,2019 .[Online]. 
+                    Available:https://www.taiwannews.com.tw/en/news/3255637.
+                    Accessed: [05-Sep-2021].
+                </li><li>
+                    eater.com,A Culinary Walking Tour Through Taiwan’s Street Food Capital ,2019 .[Online]. 
+                    Available:https://www.eater.com/maps/best-restaurants-street-food-tainan-walking-tour.
+                    Accessed: [05-Sep-2021].
+                </li>
+                <li>
+                    Elizabeth Lange,4 Must-try street foods in Tainan to get your munch on ,2018 .[Online]. 
+                    Available:https://www.furama.com/vanilla/travel-tips/4-must-try-street-foods-in-tainan-to-get-your-munch-on.
+                    Accessed: [05-Sep-2021].
+                </li>
+                <li>
+                    JULES QUARTLY,Taiwan’s Top 10 Unique Foods ,2020 .[Online]. 
+                    Available:https://topics.amcham.com.tw/2020/01/taiwan-top-10-unique-foods/.
+                    Accessed: [05-Sep-2021].
+                </li>
+                <li>
+                    Eat & Drink, Day Trips ,Taiwan Street Food: 10 Reasons to Visit Keelung ,2018 .[Online]. 
+                    Available:https://keelung-for-a-walk.com/restaurant/2084/.
+                    Accessed: [05-Sep-2021].
+                </li>
+                <li>
+                    Meryl Koh ,Taiwan Insider Guide: 11 Hidden Eats to Discover in Kaohsiung and Tainan ,2017 .[Online]. 
+                    Available:https://guide.michelin.com/sg/en/article/travel/insider-guide-taiwan-11-eats-to-discover-in-kaohsiung-and-tainan.
+                    Accessed: [06-Sep-2021].
+                </li>
+                <li>
+                    TaiwaneseCulture.org ,Origins of Taiwanese Fusion Cuisine: It's Not That Simple ,2017 .[Online]. 
+                    Available:https://international.thenewslens.com/article/63903.
+                    Accessed: [06-Sep-2021].
+                </li>
+                <li> Jasmine Pak,Boba Milk Tea,2019 .[Online]. 
+                    Available:https://tasty.co/recipe/boba-milk-tea.
+                    Accessed: [06-Sep-2021].
+                </li>
+                <li>Claire Nolan ,Taiwanese Beef Noodle Soup,2017 .[Online]. 
+                    Available:https://tasty.co/recipe/taiwanese-beef-noodle-soup.
+                    Accessed: [06-Sep-2021].
+                </li>
+                <li>Shreya Shetty ,Taiwan Pork Belly Buns,2021 .[Online]. 
+                    Available:https://tasty.co/recipe/taiwan-pork-belly-buns.
+                    Accessed: [06-Sep-2021].
+                </li>
+            </ol>    
+        <h3>Source Codes</h3>
+            <ol>
+                <li> 
+                    Gaurav,Let's build a responsive navbar and hamburger menu using HTML, CSS, and Javascript,2021 .[Online]. 
+                    Available:https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci.
+                    Accessed: [01-Sep-2021].
+                </li>
+                <li>Mand Cashin,animated testimonial box ,2020 .[Online]. 
+                    Available:https://codepen.io/RazzBerryMand/pen/MNaBZd.
+                    Accessed: [01-Sep-2021].
+                </li>
+                <li>Aly ,Meet Our Team ,2021 .[Online]. 
+                    Available:https://codepen.io/afasanistan/pen/ezvPKM.
+                    Accessed: [01-Sep-2021].
+                </li>
+                <li>Anne Sophie ,responsive design FCC Kevin Powell,2021 .[Online]. 
+                    Available:https://codepen.io/anesofy/pen/NWrKWrQ.
+                    Accessed: [01-Sep-2021].
+                </li>
+                <li>mikestreety ,Responsive pure CSS tabs & accordion,2021 .[Online]. 
+                    Available:https://codepen.io/mikestreety/details/yVNNNm.
+                    Accessed: [02-Sep-2021].
+                </li>
+                <li>i.chigrinova ,JavaScript: How to add multiple image slider on one page with same script?,2020 .[Online]. 
+                    Available:https://stackoverflow.com/questions/60717232/javascript-how-to-add-multiple-image-slider-on-one-page-with-same-script.
+                    Accessed: [02-Sep-2021].
+                </li>
+                <li>Prestaul ,How can I tell if a DOM element is visible in the current viewport?,2017 .[Online]. 
+                    Available:https://stackoverflow.com/a/125106/11740548.
+                    Accessed: [02-Sep-2021].
+                </li>
+                <li> Raj Sappidi,Javascript Slideshow using an array with img URLs,2018 .[Online]. 
+                    Available:https://stackoverflow.com/questions/51904226/javascript-slideshow-using-an-array-with-img-urls/51904322.
+                    Accessed: [02-Sep-2021].
+                </li>
+                
+                <li>w3schools ,How TO - Modal Images,2021 .[Online]. 
+                    Available:https://www.w3schools.com/howto/howto_css_modal_images.asp.
+                    Accessed: [02-Sep-2021].
+                </li>
+            </ol>
+</section>
+    <hr>
+<section>
+
+    <h1>Appendices</h1>
+        <h3>Sitemap</h3>
+            <a href="./sitemap/螢幕擷取畫面 2021-09-07 015951.png">sitemap</a>
+        <h3>Wireframes</h3>
+            <h5>PC</h5>
+            <ol>
+                <li><a href="./wireframes/index-PC.png">Home</a></li>
+                <li><a href="./wireframes/about-PC.png">About</a></li>
+                <li><a href="./wireframes/article-PC.png">Article</a></li>
+                <li><a href="./wireframes/recipe-PC.png">Recipe</a></li>
+                <li><a href="./wireframes/contact-PC.png">Contact</a></li>
+            </ol>
+            <h5>Mobile</h5>
+            <ol>
+                <li><a href="./wireframes/index-Mobile.png">Home</a></li>
+                <li><a href="./wireframes/about-Mobile.png">About</a></li>
+                <li><a href="./wireframes/article-Mobile.png">Article</a></li>
+                <li><a href="./wireframes/recipe-Mobile.png">Recipe</a></li>
+                <li><a href="./wireframes/contact-Mobile.png">Contact</a></li>
+            </ol>
+        <h3>Mockups</h3>
+            <h5>PC</h5>
+                <ol>
+                    <li><a href="./mockup/index/index-PC.png">Home</a></li>
+                    <li><a href="./mockup/about/about-PC.png">About</a></li>
+                    <li><a href="./mockup/article/article-PC.png">Article</a></li>
+                    <li><a href="./mockup/recipe/recipe-PC.png">Recipe</a></li>
+                    <li><a href="./mockup/contact/contact-PC.png">Contact</a></li>
+                </ol>
+            <h5>Mobile</h5>
+                <ol>
+                    <li><a href="./mockup/index/index-Mobile.png">Home</a></li>
+                    <li><a href="./mockup/about/about-Mobile.png">About</a></li>
+                    <li><a href="./mockup/article/article-Mobile.png">Article</a></li>
+                    <li><a href="./mockup/recipe/recipe-Mobile.png">Recipe</a></li>
+                    <li><a href="./mockup/contact/contact-Mobile.png">Contact</a></li>
+                </ol>
+</section>
+</body>
+</html>
+

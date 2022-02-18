@@ -1,0 +1,333 @@
+h1 {
+  font-size: 70px;
+}
+
+/* Welcome CSS below */
+#welcome-image {
+  border-radius: 40px;
+  width: 95%;
+  margin: 0 auto;
+  height: 600px;
+  background-size: cover;
+  /* This linear gradient effect makes the background image slightly darker,
+    but not completely dark */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media-resources/img/street/street-1.jpg);
+  position: relative;
+}
+
+#welcome-image h2 {
+  position: absolute;
+  text-align: center;
+  top: 140px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 4.5rem;
+  color: #000;
+  line-height: 83px;
+  text-shadow: white 0px 0px 10px;
+}
+
+/* Welcome CSS ends */
+
+
+
+/* Who We Are below */
+#who-we-are h1 {
+  text-align: center;
+  padding: 3vh 0;
+}
+
+#who-we-are-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* Row direction to display the image and text horizontally */
+  text-align: left;
+  justify-content: space-around;
+  padding: 5vh 0;
+  text-align: center;
+}
+
+/* Left is the image, and it takes up a small portion relative to the text section */
+#who-we-are-left {
+  width: 30%;
+  height: 300px;
+  background: url(../media-resources/img/logo/facebook_cover_photo_2.png);
+  background-size: cover;
+  background-position: center;
+  /* Stretch the image from the center */
+  box-shadow: 10px 10px 10px -9px rgba(0, 0, 0, 0.9);
+}
+
+#who-we-are-wrapper p {
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+/* Right is the text section */
+#who-we-are-right {
+  width: 66%;
+  text-align: center;
+}
+
+/* Media Query for who-we-are section */
+@media screen and (max-width: 900px) {
+  #who-we-are-wrapper {
+    flex-direction: column;
+    /*Change the display direction from horizontally to vertically*/
+  }
+  /* The width of both section is set to 90% to be displayed in the center */
+  #who-we-are-left {
+    width: 90%;
+    align-self: center;
+    margin: 4vh 0;
+  }
+  #who-we-are-right {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Who We Are ends */
+
+
+
+/* Image Gallery CSS below */
+#image-gallery {
+  width: 95%;
+  margin: 20px auto;
+  height: auto;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+#image-gallery h1 {
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* The wrapper that contains all the images  */
+.gallery_container {
+  width: 32%;
+  overflow: hidden;
+  /* Set overflow to hidden to so that when image enlarges on hover, it appears as if
+    only the central parts get enlarged  */
+  height: fit-content;
+  margin: 3px;
+  padding: 0;
+  display: inline-block;
+  /* 3 images resides on same line */
+  position: relative;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.gallery_container img {
+  width: 100%;
+  overflow: hidden;
+  height: 20rem;
+  transition-duration: 0.3s;
+  /* The animation that enlarges
+    the central part of the images when on hover */
+  max-width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.gallery_title {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  top: 35%;
+  display: none;
+  /* Set display to none so that it only appears on hover*/
+  left: 50%;
+  /* Left and right are set to 50% and -50% to center the title*/
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.6em;
+  transition-duration: 0.3s;
+}
+
+.gallery_container:hover img {
+  transform: scale(1.2);
+  /*Scale images 1.2 times when on hover*/
+  opacity: 0.5;
+}
+
+.gallery_container:hover span {
+  color: white;
+  display: block;
+  /* Display images title when hover */
+}
+
+/* Media Query for image gallery */
+
+@media screen and (max-width: 900px) {
+  .gallery_container {
+    width: 100%;
+    /*Display images to 100% width on mobile */
+    margin: 0 auto;
+  }
+  #image-gallery {
+    width: 95%;
+    margin: 20px auto;
+    height: auto;
+    margin-bottom: 40px;
+    margin-right: auto;
+  }
+}
+
+/* The image model triggered when clicking on images */
+#image-gallery-modal {
+  display: none;
+  /* Hidden because it only appears when the images are clicked */
+  position: fixed;
+  /* Make sure it does not move around */
+  z-index: 1;
+  /* Make it above anything else */
+  padding-top: 100px;
+  /* Add some spaces to top to adjust image location */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* 100% width and height to take up entire page */
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Images that appears in the modal */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 1400px;
+}
+
+/* The button that shut down modal when clicked */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  /*Make it locate at the top left*/
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Image Gallery CSS ends */
+
+
+
+/* Client Review CSS below */
+/* Reference:https://codepen.io/RazzBerryMand/pen/MNaBZd */
+/* Changes and enhancements:
+    1: I add a simple Javascript effect to the review boxes so that they only show up
+    when they are in viewport
+    2: The original version only has a hover effect that changes background and font color. In my version, I added a few 
+    hover effect such as enlarging the box when being hovered
+    */
+
+#client-review {
+  text-align: center;
+}
+
+#client-review h1 {
+  margin-bottom: 40px;
+}
+
+/* Wrapper that contains three review boxes */
+#client-review-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+#review-box-container {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  /* Use grid display and set it to auto-fit so that when one line
+  cannot fit in all three boxes, the last box is pushed to another line */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.review-box {
+  position: relative;
+  padding: 40px;
+  transition: 0.5s;
+  text-align: center;
+  background: #94EDF3;
+  padding-top: 100px;
+  transition: opacity 3s;
+  margin-top: 40px;
+  height: 80%;
+}
+
+.review-box:hover {
+  background: #2665E2;
+  /* enlarge review box on hover */
+  transform: scale(1.2);
+  z-index: 5;
+}
+
+.review-box p {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.review-box h4 {
+  margin: 20px 0 0;
+  transition: 0.5s;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 20px;
+  color: crimson;
+}
+
+.review-box:hover p, .review-box:hover h4 {
+  color: #fff;
+}
+
+.review-box-img img {
+  width: 150px;
+  height: 150px;
+}
+
+.review-box-img {
+  position: absolute;
+  left: 50%;
+  /*Make image stay at the center of each box*/
+  transform: translateX(-50%);
+  top: -60px;
+  /*Make it appear at the top*/
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Media Query for review section */
+@media screen and (max-width: 900px) {
+  .review-box {
+    margin-top: 80px;
+  }
+  #review-box-container {
+    width: 100vw;
+  }
+}
+
+/* Client Review CSS ends */

@@ -1,0 +1,179 @@
+
+h1 {
+  color: #0567AC;
+  font-size: 5rem;
+  line-height: 80px;
+  margin-bottom: 30px;
+  font-family: 'Lora', serif;
+}
+
+/* about us introduction section below  */
+
+/* about us texts and image */
+#about-us-introduction {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: justify;
+}
+
+/* leave some space between texts and image */
+#about-us-img {
+  margin-right: 40px;
+}
+
+#about-us-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* texts take up most of the space in this section */
+#about-us-text {
+  padding: 20px;
+  flex-basis: 60%;
+}
+
+#about-us-text p {
+  font-size: 2rem;
+}
+
+/* Media Query for about us introduction section */
+@media screen and (max-width: 900px) {
+  /* displayed texts and image vertically on mobile */
+  #about-us-introduction {
+    flex-direction: column;
+  }
+  #about-us-img {
+    margin-right: 0;
+    width: 150%;
+  }
+  /* displayed title and text in the center on mobile */
+  #about-us-text {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* about us introduction section ends */
+
+
+
+/* our mission section below */
+
+/* our mission contains title and texts */
+#our-mission {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 3rem;
+}
+
+#our-mission p {
+  font-size: 2rem;
+}
+
+#our-team {
+  text-align: center;
+}
+
+/* our mission section ends */
+
+
+
+/* team card section below */
+/* Reference:https://codepen.io/afasanistan/pen/ezvPKM */
+/* Changes and enhancements:
+    1:In the original version, the name and job title of each team member are located
+    below outside each card. In my version, I made them display at the bottom center of
+    each card 
+    2: The information of each team member displaying on hover take up entire card 
+    in the original version, but in my version I made them only take up 30% of the space
+    */
+
+/* team-card-wrapper stores all 3 team card */
+#team-card-wrapper {
+  display: flex;
+  /*display cards horizontally*/
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* team-card has image, title and texts of a team member */
+.team-card {
+  width: 30%;
+  /*each card is 30% wide to make them all in one line*/
+  min-width: 250px;
+  height: 80%;
+  overflow: hidden;
+  /*set overflow to hidden to 
+    simulate the effect of enlarging card when on hover*/
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.team-card img {
+  width: 100%;
+  min-height: 550px;
+  transition: all 0.9s/*animation for image when on hover*/
+}
+
+.team-card:hover img {
+  transform: scale(1.4, 1.4)/* enlarge images on hover with animation */
+}
+
+/* information of a team member showing up when on hover */
+.team-card-info {
+  position: absolute;
+  /*they are always located in the bottom center of each team card*/
+  bottom: 5%;
+  background: #fff;
+  text-align: center;
+  width: 90%;
+  height: 100px;
+  /*set left and right to 0 to make them stay at the center*/
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 10px 5%;
+  opacity: 0.8;
+  transition: all 0.4s/*trigger animation when on hover*/
+}
+
+.team-card:hover .team-card-info {
+  width: 100%;
+  /*when on hover, make the info section take up 100% width */
+  height: 80%;
+  /*increase height on hover to display more information */
+  bottom: 30;
+  opacity: 0.9;
+  padding: 90px 10%
+}
+
+.team-card-info h2 {
+  margin: 0 0 5px 0;
+  transition: color 0.4s;
+  font-size: 20px
+}
+
+.team-card-info p {
+  opacity: 0;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: 1.4rem;
+}
+
+.team-card:hover p {
+  opacity: 1
+}
+
+.team-card:hover h2 {
+  color: #38c
+}
+
+@media screen and (max-width: 900px) {
+  .team-card {
+    width: 100%;
+    margin-right: 0
+  }
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/recipe.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>FormosaFoodie-Recipes</title>
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="./media-resources/img/logo/favicon.png"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <img src="./media-resources/img/logo/logo-final.png" alt="logo" />
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item ">
+          <a href="index.html" class="nav-link navigation-link-hover">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about-us.html" class="nav-link navigation-link-hover"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="article.html" class="nav-link navigation-link-hover"
+            >Articles</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="recipe.html" class="nav-link navigation-link-hover"
+            >Recipes</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="contact_us.html" class="nav-link navigation-link-hover"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div class="navbarButton">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <div class="space"></div>
+    <!-- recipe-container is located at the center of the screen, taking up about 90% of the width -->
+    <section id="recipe-container">
+      <!-- recipe-page contains all pages of recipes and their tabs -->
+
+      <div class="recipe-page">
+        <!-- recipe page 1 -->
+        <!-- input to detect user's choice and label to display the recipe names -->
+        <input type="radio" name="recipe-page" id="page1" checked="checked" />
+        <label class="recipe-tabs" for="page1">Bubble Milk Tea</label>
+        <!-- page-content contains the title, texts and image carousel of a recipe -->
+        <div class="page-content">
+          <h1>Bubble Milk Tea</h1>
+          <p>
+            <!-- The part of the texts displayed on both mobile and PC -->
+            Make the boba pearls: Add the water and muscovado sugar to a medium
+            pan over medium-high heat. Cook until the sugar dissolves and the
+            mixture comes to a boil, 3–4 minutes. Add a bit of the tapioca flour
+            and cook, stirring constantly, until smooth.
+            <br />
+            <!-- text below is hidden on mobile by default -->
+            <span id="firstTarget" class="extra_content"
+              >Add half of the remaining tapioca flour and stir vigorously until
+              a sticky dough forms. Turn off the heat and add the remaining
+              tapioca flour. Stir until the dough comes together in a ball (not
+              all of the flour will be incorporated at this stage). Let cool
+              slightly.</span
+            >
+            <!-- click on read more button to show more texts -->
+            <button class="read_more" data-target="firstTarget">
+              Show More
+            </button>
+          </p>
+          <!-- image carousel of a recipe -->
+          <div class="slideshow-container" id="first">
+            <div class="mySlides fade">
+              <img
+                alt="bubble milk tea"
+                src="./media-resources/img/food/bubble milk tea 1.jpg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                alt="bubble milk tea"
+                src="./media-resources/img/food/bubble milk tea 2.jpg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                alt="bubble milk tea"
+                src="./media-resources/img/food/bubble milk tea 3.jpg"
+              />
+            </div>
+
+            <!--switch to next/previous images using the two buttons on the right and left -->
+            <a
+              class="prev"
+              onclick="plusSlides(-1, 'first', 'firstSliderIndex')"
+              >&#10094;</a
+            >
+            <a class="next" onclick="plusSlides(1, 'first', 'firstSliderIndex')"
+              >&#10095;</a
+            >
+            <br />
+            <!-- jump to specific image using three dots below the carousel -->
+            <div class="slider-dots">
+              <span
+                class="slider-dot"
+                onclick="currentSlide(1, 'first', 'firstSliderIndex')"
+              ></span>
+              <span
+                class="slider-dot"
+                onclick="currentSlide(2, 'first', 'firstSliderIndex')"
+              ></span>
+              <span
+                class="slider-dot"
+                onclick="currentSlide(3, 'first', 'firstSliderIndex')"
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- recipe page 2 -->
+        <!-- input to detect user's choice and label to display the recipe names -->
+        <input type="radio" name="recipe-page" id="page2" />
+        <label class="recipe-tabs" for="page2">Beef Noodle Soup</label>
+        <!-- page-content contains the title, texts and image carousel of a recipe -->
+        <div class="page-content">
+          <h1>Beef Noodle Soup</h1>
+          <p>
+            <!-- The part of the texts displayed on both mobile and PC -->
+            Fill a large pot with about 6 quarts (5 ½ L) of water and add the
+            beef shank, 3 scallions, 5 slices of ginger, and 3 star anise pods.
+            Cover, bring to a boil over high heat, and cook for 5 minutes.
+            <!-- text below is hidden on mobile by default -->
+            <span id="secondTarget" class="extra_content"
+              >Remove the meat from the pot, rinse in cold water, and cut into
+              thick slices. Discard the cooking liquid.</span
+            >
+            <!-- click on read more button to show more texts -->
+            <button class="read_more" data-target="secondTarget">
+              Show More
+            </button>
+          </p>
+          <!-- image carousel of a recipe -->
+          <div class="slideshow-container" id="second">
+            <div class="mySlides fade">
+              <img
+                alt="Beef Noodle Soup"
+                src="./media-resources/img/food/beef noodle soup 1.jpg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                alt="Beef Noodle Soup"
+                src="./media-resources/img/food/beef noodle soup 2.jpg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                alt="Beef Noodle Soup"
+                src="./media-resources/img/food/beef noodle soup 3.jpg"
+              />
+            </div>
+
+            <!-- switch to next/previous images using the two buttons on the right and left -->
+            <a
+              class="prev"
+              onclick="plusSlides(-1, 'second', 'firstSliderIndex')"
+              >&#10094;</a
+            >
+            <a
+              class="next"
+              onclick="plusSlides(1, 'second', 'firstSliderIndex')"
+              >&#10095;</a
+            >
+            <br />
+            <!-- jump to specific image using three dots below the carousel -->
+            <div class="slider-dots">
+              <span
+                class="slider-dot"
+                onclick="currentSlide(1, 'second', 'firstSliderIndex')"
+              ></span>
+              <span
+                class="slider-dot"
+                onclick="currentSlide(2, 'second', 'firstSliderIndex')"
+              ></span>
+              <span
+                class="slider-dot"
+                onclick="currentSlide(3, 'second', 'firstSliderIndex')"
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- recipe page 3 -->
+        <!-- input to detect user's choice and label to display the recipe names -->
+        <input type="radio" name="recipe-page" id="page3" />
+        <label class="recipe-tabs" for="page3">Pork Belly Bun</label>
+        <!-- page-content contains the title, texts and image carousel of a recipe -->
+        <div class="page-content">
+          <h1>Pork Belly Bun</h1>
+          <p>
+            <!-- The part of the texts displayed on both mobile and PC -->
+            The Buns: In a measuring jug, place the sugar and warm water. Stir
+            until the sugar is dissolved. Add the active yeast, then stir and
+            set aside for 10-15 minutes.
+            <!-- text below is hidden on mobile by default -->
+            <span id="thirdTarget" class="extra_content">
+              In a large bowl, mix together the flour and baking powder. Add the
+              yeast mixture to the bowl and stir until nearly combined. Add the
+              oil, then stir until fully incorporated. Turn the dough out onto a
+              floured work surface and knead for 10-15 minutes.
+            </span>
+            <!-- click on read more button to show more texts -->
+            <button class="read_more" data-target="thirdTarget">
+              Show More
+            </button>
+          </p>
+          <!-- image carousel of a recipe -->
+          <div class="slideshow-container" id="third">
+            <div class="mySlides fade">
+              <img
+                alt="Pork Belly Bun"
+                src="./media-resources/img/food/pork belly bun 1.jpg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                alt="Pork Belly Bun"
+                src="./media-resources/img/food/pork belly bun 2.jpg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                alt="Pork Belly Bun"
+                src="./media-resources/img/food/pork belly bun 3.jpg"
+              />
+            </div>
+
+            <!-- switch to next/previous images using the two buttons on the right and left -->
+            <a
+              class="prev"
+              onclick="plusSlides(-1, 'third', 'firstSliderIndex')"
+              >&#10094;</a
+            >
+            <a class="next" onclick="plusSlides(1, 'third', 'firstSliderIndex')"
+              >&#10095;</a
+            >
+            <br />
+            <!-- jump to specific image using three dots below the carousel -->
+            <div class="slider-dots">
+              <span
+                class="slider-dot"
+                onclick="currentSlide(1, 'third', 'firstSliderIndex')"
+              ></span>
+              <span
+                class="slider-dot"
+                onclick="currentSlide(2, 'third', 'firstSliderIndex')"
+              ></span>
+              <span
+                class="slider-dot"
+                onclick="currentSlide(3, 'third', 'firstSliderIndex')"
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- recipe page 4 -->
+        <!-- input to detect user's choice and label to display the recipe names -->
+        <input type="radio" name="recipe-page" id="page4" />
+        <label class="recipe-tabs" for="page4">Fried Dumpling</label>
+        <!-- page-content contains the title, texts and image carousel of a recipe -->
+        <div class="page-content">
+          <h1>Fried Dumpling</h1>
+          <p>
+            <!-- The part of the texts displayed on both mobile and PC -->
+            Spread cabbage and cilantro over a clean dish towel. Gather up towel
+            and squeeze out as much moisture from the cabbage as possible.
+            Transfer cabbage and cilantro to a bowl. Add pork, egg whites,
+            jalapeno peppers, ginger, and sesame oil. Mix thoroughly with your
+            hands. Season with salt and pepper.
+            <!-- text below is hidden on mobile by default -->
+            <span id="fourthTarget" class="extra_content">
+              Cover 2 baking sheets with waxed paper. Fill a small bowl with
+              water. Hold a potsticker wrapper in the palm of your hand. Place a
+              tablespoonful of the pork mixture in the center. Dip a finger in
+              water and use it to wet the edges of the wrapper. Fold up edges
+              and pinch together to seal. Transfer dumpling to a prepared baking
+              sheet. Repeat with remaining wrappers and pork mixture.
+            </span>
+            <!-- click on read more button to show more texts -->
+            <button class="read_more" data-target="fourthTarget">
+              Show More
+            </button>
+          </p>
+          <!-- image carousel of a recipe -->
+          <div class="slideshow-container" id="fourth">
+            <div class="mySlides fade">
+              <img
+                alt="Fried Dumpling"
+                src="./media-resources/img/food/fried dumpling 1.jpg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                alt="Fried Dumpling"
+                src="./media-resources/img/food/fried dumpling 2.jpg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                alt="Fried Dumpling"
+                src="./media-resources/img/food/fried dumpling 3.png"
+              />
+            </div>
+
+            <!-- switch to next/previous images using the two buttons on the right and left -->
+            <a
+              class="prev"
+              onclick="plusSlides(-1, 'fourth', 'firstSliderIndex')"
+              >&#10094;</a
+            >
+            <a
+              class="next"
+              onclick="plusSlides(1, 'fourth', 'firstSliderIndex')"
+              >&#10095;</a
+            >
+            <br />
+            <!-- jump to specific image using three dots below the carousel -->
+            <div class="slider-dots">
+              <span
+                class="slider-dot"
+                onclick="currentSlide(1, 'fourth', 'firstSliderIndex')"
+              ></span>
+              <span
+                class="slider-dot"
+                onclick="currentSlide(2, 'fourth', 'firstSliderIndex')"
+              ></span>
+              <span
+                class="slider-dot"
+                onclick="currentSlide(3, 'fourth', 'firstSliderIndex')"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <div id="footer-wrapper">
+      <!-- The left of the footer lie the logo and simple nagivation link -->
+      <div id="footer-left">
+        <a href="./index.html" class="nav-logo">
+          <img
+            src="./media-resources/img/logo/logo-final.png"
+            alt="company logo"
+          />
+        </a>
+
+        <p class="footer-links">
+          <a href="./index.html" class="navigation-link-hover">Home</a>
+
+          <a href="./about-us.html" class="navigation-link-hover">About</a>
+
+          <a href="./article.html" class="navigation-link-hover">Articles</a>
+
+          <a href="./recipe.html" class="navigation-link-hover">Recipes</a>
+
+          <a href="./contact_us.html" class="navigation-link-hover">Contact</a>
+        </p>
+      </div>
+      <!-- The center of the footer includes some contact information -->
+      <div id="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Lane 105, Peikong Rd., Sec. 24</span>Taipao City, Chiayi</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>886-5- 2372596</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="formosafoodie@company.com">formosafoodie@company.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- The right has brief introduction of the company as well as social media used by it -->
+      <div id="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          With us, you will never miss any chance on experiencing what Taiwan
+          has to offer
+        </p>
+
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+
+      <!-- This button always resides on the bottom right of the pages, and it takes users to the top when clicked -->
+    </div>
+    <i
+      id="back-to-top-button"
+      class="fa fa-arrow-up"
+      onclick="scrollToTop()"
+    ></i>
+  </footer>
+  <script src="./js/main.js"></script>
+  <script src="./js/recipe.js"></script>
+</html>

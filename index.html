@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>FormosaFoodie-Home</title>
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="./media-resources/img/logo/"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <img src="./media-resources/img/logo/logo-final.png" alt="logo" />
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item ">
+          <a href="index.html" class="nav-link navigation-link-hover">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about-us.html" class="nav-link navigation-link-hover"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="article.html" class="nav-link navigation-link-hover"
+            >Articles</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="recipe.html" class="nav-link navigation-link-hover"
+            >Recipes</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="contact_us.html" class="nav-link navigation-link-hover"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <!-- This is the button that only appears on small screen, and it shows the navigation menu when users
+click on it
+ -->
+      <div class="navbarButton">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <!-- The first thing users see when opening the website, an image with text on it -->
+    <section id="welcome-image">
+      <h2>Take a Bite Out of Hunger and Join Us</h2>
+    </section>
+
+    <div class="space"></div>
+
+    <section id="who-we-are">
+      <h1>Who We Are</h1>
+      <div id="who-we-are-wrapper">
+        <!--image section-->
+        <div id="who-we-are-left"></div>
+        <!--text-section-->
+        <div id="who-we-are-right">
+          <p>
+            <!-- For years, we have committed ourselves to spreading the information of delicious Taiwanese
+          cuisines to the rest of the world, hoping to leave the world with indelible impression of
+          what we have been gifted since we were born -->
+            Welcome to FormosaFoodie, a team dedicated to spreading information
+            of delicious Taiwanese food to the rest of the world. In our
+            website, you will be able to browse a great variety of articles,
+            information and recipes of delicious local Taiwanese cuisines.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- This section contains some images to  invoke the interests of users -->
+    <section id="image-gallery">
+      <h1>Local Taiwanese Cuisines</h1>
+      <div class="gallery_container">
+        <img
+          class="gallery-images"
+          src="./media-resources/img/food/bubble milk tea 1.jpg"
+          alt="Bubble Milk Tea"
+        />
+        <span class="gallery_title">Bubble Milk Tea</span>
+      </div>
+      <div class="gallery_container">
+        <img
+          class="gallery-images"
+          src="./media-resources/img/food/beef noodle soup 1.jpg"
+          alt="Beef Noodle Soup"
+        />
+        <span class="gallery_title">Beef Noodle Soup</span>
+      </div>
+      <div class="gallery_container">
+        <img
+          class="gallery-images"
+          src="media-resources/img/food/sticky rice dumpling.jpg"
+          alt="Sticky Rice Dumpling"
+        />
+        <span class="gallery_title">Sticky Rice Dumpling</span>
+      </div>
+      <div class="gallery_container">
+        <img
+          class="gallery-images"
+          src="./media-resources/img/food/Oyster Omelet.jpg"
+          alt="Oyster Omelet"
+        />
+        <span class="gallery_title">Oyster Omelet</span>
+      </div>
+      <div class="gallery_container">
+        <img
+          class="gallery-images"
+          src="./media-resources/img/food/stinky tofu.jpg"
+          alt="Stinky Tofu"
+        />
+        <span class="gallery_title">Stinky Tofu</span>
+      </div>
+      <div class="gallery_container">
+        <img
+          class="gallery-images"
+          src="./media-resources/img/food/Pineapple Cake 1.jpg"
+          alt="Pineapple Cake"
+        />
+        <span class="gallery_title">Pineapple Cake</span>
+      </div>
+
+      <!-- This section would take up entire screen when users click on any of the images above-->
+      <div id="image-gallery-modal">
+        <span class="modal-close">×</span>
+        <img class="modal-content" id="modal-img" alt="modal" />
+        <div id="modal-caption"></div>
+      </div>
+    </section>
+
+    <!-- Three boxes containing reviews from clients -->
+    <section id="client-review">
+      <h1>Client Reviews</h1>
+      <section id="client-review-wrapper">
+        <div id="review-box-container">
+          <div class="review-box">
+            <div class="review-box-img">
+              <img
+                alt="client 1"
+                src="./media-resources/img/people/headshot 1.png"
+              />
+            </div>
+            <p>"Best Website for Information on Taiwanese Food for Everyone"</p>
+            <h4>Joe Handsome</h4>
+          </div>
+
+          <div class="review-box">
+            <div class="review-box-img">
+              <img
+                alt="client 2"
+                src="./media-resources/img/people/headshot 2.jpg"
+              />
+            </div>
+            <p>
+              "My life would have been so much better had I found this website
+              earlier."
+            </p>
+            <h4>Anna Jackson</h4>
+          </div>
+
+          <div class="review-box ">
+            <div class="review-box-img">
+              <img
+                alt="client 3"
+                src="./media-resources/img/people/headshot 3.png"
+              />
+            </div>
+            <p>
+              "My Travel to Taiwan would not have been so great without them."
+            </p>
+            <h4>Josh Morgan</h4>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+
+  <footer>
+    <div id="footer-wrapper">
+      <!-- The left of the footer lie the logo and simple nagivation link -->
+      <div id="footer-left">
+        <a href="./index.html" class="nav-logo">
+          <img
+            src="./media-resources/img/logo/logo-final.png"
+            alt="company logo"
+          />
+        </a>
+
+        <p class="footer-links">
+          <a href="./index.html" class="navigation-link-hover">Home</a>
+
+          <a href="./about-us.html" class="navigation-link-hover">About</a>
+
+          <a href="./article.html" class="navigation-link-hover">Articles</a>
+
+          <a href="./recipe.html" class="navigation-link-hover">Recipes</a>
+
+          <a href="./recipe.html" class="navigation-link-hover">Contact</a>
+        </p>
+      </div>
+      <!-- The center of the footer includes some contact information -->
+      <div id="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Lane 105, Peikong Rd., Sec. 24</span>Taipao City, Chiayi</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>886-5- 2372596</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="formosafoodie@company.com">formosafoodie@company.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- The right has brief introduction of the company as well as social media used by it -->
+      <div id="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          With us, you will never miss any chance on experiencing what Taiwan
+          has to offer
+        </p>
+
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+
+      <!-- This button always resides on the bottom right of the pages, and it takes users to the top when clicked -->
+    </div>
+    <i
+      id="back-to-top-button"
+      class="fa fa-arrow-up"
+      onclick="scrollToTop()"
+    ></i>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/index.js"></script>
+</html>

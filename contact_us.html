@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>FormosaFoodie-Contact</title>
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="./media-resources/img/logo/favicon.png"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <img src="./media-resources/img/logo/logo-final.png" alt="" />
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item ">
+          <a href="index.html" class="nav-link navigation-link-hover">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about-us.html" class="nav-link navigation-link-hover"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="article.html" class="nav-link navigation-link-hover"
+            >Articles</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="recipe.html" class="nav-link navigation-link-hover"
+            >Recipes</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="contact_us.html" class="nav-link navigation-link-hover"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div class="navbarButton">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <!-- contact form section -->
+    <section id="contact-section">
+      <!-- form-wrapper to keep the form at the center -->
+      <div id="form-wrapper">
+        <!-- contact-form have 3 input and 1 text area -->
+        <form class="contact-form" action="/">
+          <!-- image at the top of the form -->
+          <div class="form-banner">
+            <!-- image text -->
+            <h1>Send Us a Message</h1>
+          </div>
+          <!-- name input -->
+          <div class="form-inputs">
+            <label for="name">Name<span>*</span></label>
+            <input id="name" type="text" name="name" required />
+          </div>
+          <!-- email input -->
+          <div class="form-inputs">
+            <label for="email">Email<span>*</span></label>
+            <input id="email" type="email" name="email" required />
+          </div>
+          <!-- address input -->
+          <div class="form-inputs">
+            <label for="address">Phone<span>*</span></label>
+            <input id="address" type="address" name="address" required />
+          </div>
+          <!-- message input -->
+          <div class="form-inputs">
+            <label for="message">Message<span>*</span></label>
+            <textarea
+              id="message"
+              type="message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+          <!-- submit button that checks whether all inputs have been filled upon being clicked -->
+          <div>
+            <button
+              id="submit-button"
+              type="submit"
+              href="/"
+              onclick="checkValidation()"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- texts displayed when clicking on submit button without filling all inputs -->
+      <div id="check-validation">
+        <h3>Please Fill All Inputs</h3>
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <div id="footer-wrapper">
+      <!-- The left of the footer lie the logo and simple nagivation link -->
+      <div id="footer-left">
+        <a href="./index.html" class="nav-logo">
+          <img
+            src="./media-resources/img/logo/logo-final.png"
+            alt="company logo"
+          />
+        </a>
+
+        <p class="footer-links">
+          <a href="./index.html" class="navigation-link-hover">Home</a>
+
+          <a href="./about-us.html" class="navigation-link-hover">About</a>
+
+          <a href="./article.html" class="navigation-link-hover">Articles</a>
+
+          <a href="./recipe.html" class="navigation-link-hover">Recipes</a>
+
+          <a href="./recipe.html" class="navigation-link-hover">Contact</a>
+        </p>
+      </div>
+      <!-- The center of the footer includes some contact information -->
+      <div id="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Lane 105, Peikong Rd., Sec. 24</span>Taipao City, Chiayi</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>886-5- 2372596</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="formosafoodie@company.com">formosafoodie@company.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- The right has brief introduction of the company as well as social media used by it -->
+      <div id="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          With us, you will never miss any chance on experiencing what Taiwan
+          has to offer
+        </p>
+
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+
+      <!-- This button always resides on the bottom right of the pages, and it takes users to the top when clicked -->
+    </div>
+    <i
+      id="back-to-top-button"
+      class="fa fa-arrow-up"
+      onclick="scrollToTop()"
+    ></i>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/contact.js"></script>
+</html>
